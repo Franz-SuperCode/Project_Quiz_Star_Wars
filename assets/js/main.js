@@ -130,6 +130,7 @@ function createNewQuestions(object) {
                 setTimeout(() => {
                     //setze alles zurück
                     divEl.innerHTML = "";
+
                     objectPosition++;
                     createNewQuestions(objectPosition);
                 }, 1000);
@@ -143,7 +144,11 @@ function createNewQuestions(object) {
                     pAnswer.textContent = `${winCounter} richtig und ${looseCounter} falsch. Gut gemacht!`
                 }
 
+                setTimeout(() => {
+                    divButton.style.display = "none"
+                }, 1000);
                 pAnswer.classList.add("animationWinner");
+
             }
 
         })
