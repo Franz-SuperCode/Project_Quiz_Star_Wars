@@ -111,22 +111,23 @@ function createNewQuestions(object) {
 
             console.log(object);
             if (newButton.textContent == theAnswer) {
-                newButton.style.backgroundColor = "green";
                 console.log("Richtig");
                 pAnswer.textContent = "Richtig!"
+                pAnswer.style.color = "green";
                 winCounter++;
 
             } else {
-                newButton.style.backgroundColor = "red";
                 console.log("falsch");
                 pAnswer.textContent = "Falsch!"
+                pAnswer.style.color = "red";
                 looseCounter++;
             }
-
 
             divEl.appendChild(pAnswer);
             //Sobald alle Objekte im Quiz abgefragt wurden, soll er das nicht mehr ausführen (Es sind 10 Objekte)
             if (object < 9) {
+                //DIe Button direkt wegmachen
+                divButton.innerHTML = "";
                 setTimeout(() => {
                     //setze alles zurück
                     divEl.innerHTML = "";
@@ -143,9 +144,8 @@ function createNewQuestions(object) {
                 if (winCounter == 9 || winCounter == 10) {
                     pAnswer.textContent = `${winCounter} richtig und ${looseCounter} falsch. Gut gemacht!`
                 }
-
+                divButton.innerHTML = "";
                 setTimeout(() => {
-                    divButton.style.display = "none"
                 }, 1000);
                 pAnswer.classList.add("animationWinner");
 
