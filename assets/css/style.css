@@ -1,0 +1,75 @@
+html {}
+
+body {
+    background-image: url("https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    /* cursor: url("../img/darth\ vader.png"), auto; */
+    height: 100vh;
+    color: #fafafa;
+}
+
+body:hover {
+    cursor: url("../img/sword.png"), auto;
+
+}
+
+div {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+button {
+    background-color: #fafafa;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+
+}
+
+button:hover {
+    cursor: url("../img/darth\ vader.png"), auto;
+    background-color: rgb(171, 168, 168);
+}
+
+.animationWinner {
+    animation-name: win;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes win {
+    0% {}
+
+    50% {
+        color: red;
+    }
+
+    60% {
+        color: rgb(81, 255, 0);
+    }
+
+    70% {
+        color: rgb(255, 217, 0);
+    }
+
+    100% {}
+}
